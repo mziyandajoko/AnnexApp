@@ -36,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           elevation: 0.0,
           title: Text(widget.title),
-          backgroundColor: Colors.red[300],
+          backgroundColor: Colors.green[300],
           actions: <Widget>[
             IconButton(
               icon: const Icon(Icons.search),
@@ -57,6 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: ListView(
             children: <Widget>[
               UserAccountsDrawerHeader(
+                decoration: BoxDecoration(color: Colors.green),
                 currentAccountPicture: CircleAvatar(),
                 accountEmail: Text('joko.mzee@gmail.com'),
                 accountName: Text('Mziyanda Joko'),
