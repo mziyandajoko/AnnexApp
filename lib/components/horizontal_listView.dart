@@ -4,41 +4,40 @@ class HorizontalListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80.0,
-      child: ListView(
-        scrollDirection: Axis.horizontal,
-        children: <Widget>[
-          Catagory(
-            imageLocation: 'images/cats/accessories.png',
-            imageCaption: 'Silver ware',
+        height: 80.0,
+        child: ListView(
+          scrollDirection: Axis.horizontal,
+          children: <Widget>[
+            Catagory(
+              imageLocation: 'images/cats/images.jpeg',
+              imageCaption: 'Adventure',
             ),
             Catagory(
-            imageLocation: 'images/cats/dress.png',
-            imageCaption: 'dress',
+              imageLocation: 'images/cats/JHB.jpeg',
+              imageCaption: 'Poetry',
             ),
             Catagory(
-            imageLocation: 'images/cats/formal.png',
-            imageCaption: 'formal',
+              imageLocation: 'images/cats/makers.jpeg',
+              imageCaption: 'formal',
             ),
             Catagory(
-            imageLocation: 'images/cats/informal.png',
-            imageCaption: 'informal',
+              imageLocation: 'images/cats/necesarrEvil.jpeg',
+              imageCaption: 'Adventure',
             ),
             Catagory(
-            imageLocation: 'images/cats/jeans.png',
-            imageCaption: 'jeans',
+              imageLocation: 'images/cats/principle.jpeg',
+              imageCaption: 'Poetry',
             ),
             Catagory(
-            imageLocation: 'images/cats/shoe.png',
-            imageCaption: 'shoe',
+              imageLocation: 'images/cats/reader.jpeg',
+              imageCaption: 'Noverl',
             ),
             Catagory(
-            imageLocation: 'images/cats/tshirt.png',
-            imageCaption: 'tshirt',
+              imageLocation: 'images/cats/whiteSlag.jpeg',
+              imageCaption: 'history',
             ),
-        ],
-      )
-    );
+          ],
+        ));
   }
 }
 
@@ -50,26 +49,26 @@ class Catagory extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(2.0),
-      child: InkWell (onTap: (){},
-      child: Container(
-        width: 100.0,
-        height: 80.0,
-        child: ListTile(
-          title: Image.asset(imageLocation),
-          subtitle: Container(
-            padding: EdgeInsets.all(5.0),
-            alignment: Alignment.topCenter,
-            child: Text(imageCaption,
-            style: TextStyle(
-              fontSize: 12.0,
+      child: InkWell(
+        onTap: () {},
+        child: Container(
+          width: 100.0,
+          height: 80.0,
+          child: ListTile(
+            title: Image.asset(imageLocation),
+            subtitle: Container(
+              padding: EdgeInsets.all(5.0),
+              alignment: Alignment.topCenter,
+              child: Text(
+                imageCaption,
+                style: TextStyle(
+                  fontSize: 12.0,
+                ),
+              ),
             ),
-            ),
-            ),
+          ),
         ),
       ),
-
-      ),
-      
     );
   }
 }
