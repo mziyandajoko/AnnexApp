@@ -58,6 +58,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 Navigator.pop(context);
               },
             ),
+            Center(
+              child: Text('or',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 20.0,),),
+            ),
+            UtilityButtons(
+              colour: Colors.lightGreen,
+              title: 'Register',
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
           ],
         ),
       ),
