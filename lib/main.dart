@@ -1,7 +1,10 @@
 import 'package:ecommerce_app/components/cart.dart';
 import 'package:ecommerce_app/home/home.dart';
+import 'package:ecommerce_app/models/user.dart';
 import 'package:ecommerce_app/pages/logIn.dart';
+import 'package:ecommerce_app/services/auth.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 
 void main() => runApp(MyApp());
@@ -30,8 +33,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
     
 
-    return Container(
-      child: LoginScreen()  
+    return StreamProvider<User>.value(
+      value: AuthService().user,
+          child: Container(
+        child: LoginScreen()  
+      ),
     );
   }
 }

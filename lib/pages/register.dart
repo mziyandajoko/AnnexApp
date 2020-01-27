@@ -4,7 +4,6 @@ import 'package:ecommerce_app/services/auth.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
-  static const String id = 'loginScreen';
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
@@ -20,19 +19,19 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) { 
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.green[300],
-        elevation: 0.0,
-        title: Text('signIn to annex'),
-        actions: <Widget>[
+    return Scaffold( 
+       appBar: AppBar( 
+         backgroundColor: Colors.green[300],
+         elevation: 0.0,
+         title: Text('Sign up to Annex'),
+         actions: <Widget>[
            FlatButton.icon(
              icon: Icon(Icons.person),
              label: Text('signIn'),
            )
          ],
-      ),
+       ),
+      backgroundColor: Colors.white,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Form(

@@ -1,6 +1,7 @@
 import 'package:ecommerce_app/components/carousel.dart';
 import 'package:ecommerce_app/components/horizontal_listView.dart';
 import 'package:ecommerce_app/components/products.dart';
+import 'package:ecommerce_app/services/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_app/components/cart.dart';
 // import 'components/carousel.dart';
@@ -8,16 +9,17 @@ import 'package:ecommerce_app/components/cart.dart';
 // import 'components/products.dart';
 
 class Home extends StatelessWidget {
+  final AuthService _auth =AuthService();
   @override
   Widget build(BuildContext context) {
 
-        ImageCarousel imageCarousel = ImageCarousel();
+        // ImageCarousel imageCarousel = ImageCarousel();
 
-    var widget;
+   
         return Scaffold(
             appBar: AppBar(
               elevation: 0.0,
-              title: Text('home'),
+              title: Text('Annex'),
           backgroundColor: Colors.green[300],
           actions: <Widget>[
             IconButton(
@@ -91,6 +93,15 @@ class Home extends StatelessWidget {
                 child: ListTile(
                   title: Text('info'),
                   leading: Icon(Icons.question_answer),
+                ),
+              ),
+               InkWell(
+                onTap: () async{
+                  await _auth.signOut();
+                },
+                child: ListTile(
+                  title: Text('SignOut'),
+                  leading: Icon(Icons.lock),
                 ),
               ),
             ],
